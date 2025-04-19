@@ -1,0 +1,22 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Hybrid Deepfake Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Result</h1>
+        <div class="result">
+            <p><strong>File Type:</strong> {{ file_type }}</p>
+            <p><strong>File Name:</strong> {{ filename }}</p>
+            <p><strong>Verdict:</strong> {{ result }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}</p>
+        </div>
+        <a href="{{ url_for('index') }}"><button>Try Another File</button></a>
+    </div>
+</body>
+</html>

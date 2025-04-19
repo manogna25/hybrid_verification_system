@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Deepfake Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hybrid Deepfake Detector</h1>
+        <p>Upload an image, video, or audio file to check if it's real or AI-generated.</p>
+        <form method="post" enctype="multipart/form-data">
+            <label for="file_type">File Type:</label>
+            <select name="file_type" id="file_type" required>
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+                <option value="audio">Audio</option>
+            </select>
+            <input type="file" name="file" accept=".jpg,.jpeg,.png,.mp4,.avi,.mp3,.wav" required>
+            <button type="submit">Analyze</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="error">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
