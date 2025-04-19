@@ -19,24 +19,24 @@ A multimodal deepfake detection system that analyzes images, videos, and audio t
    in train_image.py and train_video.py
 
 ## To Excecute
-# clone this repo
+### clone this repo
    git clone https://github.com/manogna25/hybrid_verification_system.git
    cd hybrid_verification_system
-# Create and Activate Virtual Environment
+### Create and Activate Virtual Environment
 
-   # Create venv (Windows)
+   ### Create venv (Windows)
    python -m venv venv
    
-   # Activate venv (Windows)
+   ### Activate venv (Windows)
    venv\Scripts\activate
-# intall dependencies
+### intall dependencies
    pip install -r requirements.txt
-# train
+### train
    download audio dataset into folder datasets which contains real, fake folders
    train using python training/train_audio.py ->which creates weights folder with .pth file
    for image and video 
    download the datasets and place them in your google drive, use google collab to train, use runtime gpu for faster process
    add the dowloaded .pth files of image and video in weights folder
-# run
+### run
    python app.py
    Running on http://127.0.0.1:5000/
