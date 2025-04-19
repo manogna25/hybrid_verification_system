@@ -39,4 +39,5 @@ A multimodal deepfake detection system that analyzes images, videos, and audio t
    add the dowloaded .pth files of image and video in weights folder
 ### run
    python app.py
+   
    Running on http://127.0.0.1:5000/
