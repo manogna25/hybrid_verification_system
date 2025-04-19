@@ -2,6 +2,7 @@
 venv/
 #datsets too
 datasets/
+uploads/
 # Ignore compiled files
 __pycache__/
 *.pyc
